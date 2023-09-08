@@ -1,0 +1,211 @@
+{
+    "name": "Bytechamber Light",
+    "author": "@tmmvn",
+    "variables":
+    {
+        "white": "#ffffff",
+        "light_gray": "#c0c0c0",
+        "dark_gray": "#808080",
+        "black": "#000000",
+        "bluish": "#000080",
+        "pinkish": "#800080",
+        "greenish": "#004000"
+    },
+    "globals":
+    {
+        "foreground": "var(black)",
+        "background": "var(light_gray)",
+        "caret": "var(black)",
+        "block_caret": "var(black)",
+        "selection": "var(dark_gray)",
+        "selection_border": "var(black)",
+        "inactive_selection": "var(black)",
+        "line_highlight": "var(black)",
+        "highlight": "var(black)",
+        "find_highlight": "var(black)",
+        "find_highlight_foreground": "var(black)",
+        "active_guide": "var(black)",
+        "stack_guide": "var(black)",
+        "shadow": "var(black)",
+        "accent": "var(black)",
+        "misspelling": "var(black)",
+        "fold_marker": "var(black)",
+    },
+    "rules":
+    [
+        {
+            "scope": "text",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "source - comment - string - keyword - punctuation - storage - entity - source.css",
+            "foreground": ["var(black)", "var(black)"]
+        },
+        {
+            "scope": "comment",
+            "foreground": "var(greenish)"
+        },
+        {
+            "scope": "entity.name - entity.name.tag - entity.name.section",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "support.function.builtin, support.class.builtin, variable.language",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "keyword.operator",
+            "foreground": "var(black)",
+            //"background": "#fff"
+        },
+        {
+            "scope": "keyword, constant.language",
+            "foreground": "var(pinkish)"
+        },
+        {
+            "scope": "constant.numeric",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "storage.type.numeric",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "constant.character",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "storage, support.type.sys-types",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "string",
+            "foreground": "var(bluish)",
+        },
+        {
+            "scope": "punctuation.definition.string",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "punctuation - punctuation.definition.numeric.base",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "meta.function-call variable.parameter",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "invalid.illegal",
+            "foreground": "var(black)"
+        },
+        {
+            "scope": "invalid.deprecated",
+            "foreground": "var(black)"
+        },
+        // HTML
+        // {
+        //     "scope": "entity.name.tag",
+        //     "foreground": "var(black)"
+        // },
+        // HTML/CSS
+        // {
+        //     "scope": "entity.other.attribute-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.other.attribute-name.id",
+        //     "foreground": "var(black)"
+        // },
+        // CSS
+        // {
+        //     "scope": "support.type.property-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "support.type.vendor-prefix",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.other.pseudo-class",
+        //     "foreground": "var(black)"
+        // },
+        // Markdown
+        // {
+        //     "scope": "markup.heading.1 entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.heading.2 entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.italic",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.bold",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.italic markup.bold | markup.bold markup.italic",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline markup.bold | markup.bold markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline markup.italic | markup.italic markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.bold markup.italic markup.underline | markup.bold markup.underline markup.italic | markup.italic markup.bold markup.underline | markup.italic markup.underline markup.bold | markup.underline markup.bold markup.italic | markup.underline markup.italic markup.bold",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.list punctuation.definition.list_item",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.raw",
+        //     "background": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.raw constant.other.language-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "meta.table.header - punctuation",
+        //     "foreground": "var(black)"
+        // },
+
+        // {
+        //     "scope": "diff.deleted",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.deleted.char",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.inserted",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.inserted.char",
+        //     "foreground": "var(black)"
+        // },
+    ]
+}

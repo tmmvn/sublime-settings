@@ -1,0 +1,211 @@
+{
+    "name": "MSDOS",
+    "author": "@tmmvn",
+    "variables":
+    {
+        "white": "#ffffff",
+        "light_gray": "#c0c0c0",
+        "dark_gray": "#808080",
+        "black": "#000000",
+        "bluish": "#0000c0",
+        "pinkish": "#ff00ff",
+        "greenish": "#00ff00"
+    },
+    "globals":
+    {
+        "foreground": "var(white)",
+        "background": "var(bluish)",
+        "caret": "var(white)",
+        "block_caret": "var(white)",
+        "selection": "var(black)",
+        "selection_border": "var(white)",
+        "inactive_selection": "var(white)",
+        "line_highlight": "var(white)",
+        "highlight": "var(white)",
+        "find_highlight": "var(white)",
+        "find_highlight_foreground": "var(bluish)",
+        "active_guide": "var(white)",
+        "stack_guide": "var(white)",
+        "shadow": "var(black)",
+        "accent": "var(white)",
+        "misspelling": "var(white)",
+        "fold_marker": "var(white)",
+    },
+    "rules":
+    [
+        {
+            "scope": "text",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "source - comment - string - keyword - punctuation - storage - entity - source.css",
+            "foreground": ["var(white)", "var(white)"]
+        },
+        {
+            "scope": "comment",
+            "foreground": "var(greenish)"
+        },
+        {
+            "scope": "entity.name - entity.name.tag - entity.name.section",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "support.function.builtin, support.class.builtin, variable.language",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "keyword.operator",
+            "foreground": "var(white)",
+            "//background": "#fff"
+        },
+        {
+            "scope": "keyword, constant.language",
+            "foreground": "var(pinkish)"
+        },
+        {
+            "scope": "constant.numeric",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "storage.type.numeric",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "constant.character",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "storage, support.type.sys-types",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "string",
+            "foreground": "var(pinkish)",
+        },
+        {
+            "scope": "punctuation.definition.string",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "punctuation - punctuation.definition.numeric.base",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "meta.function-call variable.parameter",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "invalid.illegal",
+            "foreground": "var(white)"
+        },
+        {
+            "scope": "invalid.deprecated",
+            "foreground": "var(white)"
+        },
+        // HTML
+        // {
+        //     "scope": "entity.name.tag",
+        //     "foreground": "var(black)"
+        // },
+        // HTML/CSS
+        // {
+        //     "scope": "entity.other.attribute-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.other.attribute-name.id",
+        //     "foreground": "var(black)"
+        // },
+        // CSS
+        // {
+        //     "scope": "support.type.property-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "support.type.vendor-prefix",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.other.pseudo-class",
+        //     "foreground": "var(black)"
+        // },
+        // Markdown
+        // {
+        //     "scope": "markup.heading.1 entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.heading.2 entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "entity.name.section",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.italic",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.bold",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.italic markup.bold | markup.bold markup.italic",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline markup.bold | markup.bold markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.underline markup.italic | markup.italic markup.underline",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.bold markup.italic markup.underline | markup.bold markup.underline markup.italic | markup.italic markup.bold markup.underline | markup.italic markup.underline markup.bold | markup.underline markup.bold markup.italic | markup.underline markup.italic markup.bold",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.list punctuation.definition.list_item",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.raw",
+        //     "background": "var(black)"
+        // },
+        // {
+        //     "scope": "markup.raw constant.other.language-name",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "meta.table.header - punctuation",
+        //     "foreground": "var(black)"
+        // },
+
+        // {
+        //     "scope": "diff.deleted",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.deleted.char",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.inserted",
+        //     "foreground": "var(black)"
+        // },
+        // {
+        //     "scope": "diff.inserted.char",
+        //     "foreground": "var(black)"
+        // },
+    ]
+}
