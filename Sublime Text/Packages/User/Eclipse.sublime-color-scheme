@@ -13,7 +13,7 @@
     },
     "globals":
     {
-        "accent": "var(black)",
+        "accent": "#c08000",
         "active_guide": "var(black)",
         "background": "var(white)",
         "block_caret": "var(black)",
