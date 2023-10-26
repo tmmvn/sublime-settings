@@ -2,11 +2,11 @@
 {
 	"variables":
 	{
-		"font_face": "Less Perfect MSDOS",
-		"font_size_sm": "0.8rem",
-		"font_size": "1rem",
-		"font_size_lg":"1.3rem",
-		"font_size_title": "1.6rem",
+		"font_face": "B612",
+		"font_size_sm": "0.62rem",
+		"font_size": "16px",
+		"font_size_lg":"1.62rem",
+		"font_size_title": "2.62rem",
 		"white": "#ffffff",
 		"light_gray": "#c0c0c0",
 		"dark_gray": "#808080",
@@ -37,7 +37,7 @@
 		},
 		{
 			"class": "sidebar_tree",
-			"row_padding": [8, 2, 8, 2],
+			"row_padding": [8, 0, 8, 0],
 			"indent": 16,
 			"indent_offset": 0,
 			"indent_top_level": true,
@@ -81,6 +81,11 @@
 			"layer0.tint": "var(accent)"
 		},
 		{
+			"class": "tree_row",
+			"attributes": ["highlighted", "hover"],
+			"layer0.tint": "var(black)"
+		},
+		{
 			"class": "sidebar_label",
 			"parents": [{"class": "tree_row", "attributes": ["highlighted"]}],
 			"fg": "var(white)"
@@ -101,7 +106,7 @@
 		// Open Files Icons
 		{
 			"class": "close_button",
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/close-o.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(white)",
 			"content_margin": [4, 4]
@@ -109,13 +114,14 @@
 		{
 			"class": "close_button",
 			"attributes": ["hover"],
+			"layer0.texture": "Bytechamber/Textures/close.png",
 			"layer0.tint": "var(accent)"
 		},
 		{
 			"class": "close_button",
 			"attributes": ["!hover", "dirty"],
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
-			"layer0.tint": "var(yellow)"
+			"layer0.texture": "Bytechamber/Textures/close-o.png",
+			"layer0.opacity": 0.3
 		},
 		{
 			"class": "close_button",
@@ -196,7 +202,7 @@
 		},
 		{
 			"class": "icon_folder_dup",
-			//"layer0.texture": "Theme - Default/common/symlink.png",
+			"layer0.texture": "Theme - Default/common/symlink.png",
 			"layer0.tint": "var(orange)",
 			"layer0.opacity": 1.0,
 			"content_margin": [8, 8]
@@ -225,49 +231,49 @@
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-			//"layer0.texture": "Theme - Default/common/status_untracked.png",
+			"layer0.texture": "Theme - Default/common/status_untracked.png",
 			"layer0.tint": "var(black)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-			//"layer0.texture": "Theme - Default/common/status_modified.png",
+			"layer0.texture": "Theme - Default/common/status_modified.png",
 			"layer0.tint": "var(blue)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-			//"layer0.texture": "Theme - Default/common/status_modified.png",
+			"layer0.texture": "Theme - Default/common/status_modified.png",
 			"layer0.tint": "var(orange)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-			//"layer0.texture": "Theme - Default/common/status_staged.png",
+			"layer0.texture": "Theme - Default/common/status_staged.png",
 			"layer0.tint": "var(white)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-			//"layer0.texture": "Theme - Default/common/status_staged.png",
+			"layer0.texture": "Theme - Default/common/status_staged.png",
 			"layer0.tint": "var(green)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-			//"layer0.texture": "Theme - Default/common/status_staged.png",
+			"layer0.texture": "Theme - Default/common/status_staged.png",
 			"layer0.tint": "var(red)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "vcs_status_badge",
 			"parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-			//"layer0.texture": "Theme - Default/common/status_unmerged.png",
+			"layer0.texture": "Theme - Default/common/status_unmerged.png",
 			"layer0.tint": "var(magenta)",
 			"layer0.opacity": 1.0
 		},
@@ -454,26 +460,26 @@
 			"class": "tab_control",
 			"settings": ["show_tab_close_buttons_on_left"],
 			"close_button_side": "left",
-			"content_margin": [16, 8, 16, 4]
+			"content_margin": [4, 0, 0, 0]
 		},
 		{
 			"class": "tab_control",
 			"settings": ["!show_tab_close_buttons"],
-			"content_margin": [16, 8, 16, 4]
+			"content_margin": [8, 8, 8, 4]
 		},
 		{
 			"class": "tab_close_button",
 			"settings": ["show_tab_close_buttons"],
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/close-o.png",
 			"layer0.tint": "var(black)",
 			"layer0.opacity": 1.0,
-			"content_margin": [4, 4]
+			"content_margin": [6, 6]
 		},
 		{
 			"class": "tab_close_button",
 			"attributes": ["!hover"],
 			"parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-			"layer0.texture": "Bytechamber/Textures/hex1.png"
+			"layer0.opacity": 0.3
 		},
 		{
 			"class": "tab_close_button",
@@ -486,12 +492,14 @@
 		{
 			"class": "tab_close_button",
 			"attributes": ["hover"],
-			"parents": [{"class": "tab_control", "attributes": ["!selected"]}]
+			"parents": [{"class": "tab_control", "attributes": ["!selected"]}],
+			"layer0.texture": "Bytechamber/Textures/close.png"
 		},
 		{
 			"class": "tab_close_button",
 			"attributes": ["hover"],
-			"parents": [{"class": "tab_control", "attributes": ["selected"]}]
+			"parents": [{"class": "tab_control", "attributes": ["selected"]}],
+			"layer0.texture": "Bytechamber/Textures/close.png"
 		},
 		{
 			"class": "tab_close_button",
@@ -515,11 +523,11 @@
 		// Tab scrolling
 		{
 			"class": "scroll_tabs_left_button",
-			//"layer0.texture": "Theme - Default/common/tab_scroll_left.png",
+			"layer0.texture": "Bytechamber/Textures/left.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(white)",
-			"layer0.inner_margin": [0, 0, 8, 0],
-			"content_margin": [8, 16, 8, 16]
+			"layer0.inner_margin": [0, 0, 0, 0],
+			"content_margin": [8, 8, 8, 8]
 		},
 		{
 			"class": "scroll_tabs_left_button",
@@ -533,13 +541,13 @@
 		},
 		{
 			"class": "scroll_tabs_right_button",
-			//"layer0.texture": "Theme - Default/common/tab_scroll_right.png",
+			"layer0.texture": "Bytechamber/Textures/right.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(white)",
-			"layer0.inner_margin": [16, 0, 0, 0],
+			"layer0.inner_margin": [0, 0, 0, 0],
 			// Reduces the right padding on the button due to accomodate for
 			// tab overlap
-			"content_margin": [8, 8, 4, 8]
+			"content_margin": [8, 8, 8, 8]
 		},
 		{
 			"class": "scroll_tabs_right_button",
@@ -554,7 +562,7 @@
 		},
 		{
 			"class": "new_tab_button",
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/plus.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(white)",
 			"layer0.inner_margin": [0, 0, 0, 0],
@@ -577,7 +585,7 @@
 		},
 		{
 			"class": "show_tabs_dropdown_button",
-			//"layer0.texture": "Theme - Default/common/tab_dropdown.png",
+			"layer0.texture": "Bytechamber/Textures/down.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(white)",
 			"layer0.inner_margin": [0, 0, 0, 0],
@@ -647,19 +655,19 @@
 			"class": "quick_panel_label",
 			"font.face": "var(font_face)",
 			"font.size": "var(font_size_lg)",
-			"fg": "var(black)",
-			"match_fg": "var(cyan)",
+			"fg": "var(dark_gray)",
+			"match_fg": "var(black)",
 			"selected_fg": "var(white)",
-			"selected_match_fg": "var(cyan)"
+			"selected_match_fg": "var(dark_gray)"
 		},
 		{
 			"class": "quick_panel_path_label",
 			"font.size": "var(font_size_sm)",
-			"fg": "var(black)",
-			"bg": "var(red)",
-			"match_fg": "var(orange)",
-			"selected_fg": "var(blue)",
-			"selected_match_fg": "var(cyan)"
+			"fg": "var(light_gray)",
+			"bg": "var(dark_gray)",
+			"match_fg": "var(black)",
+			"selected_fg": "var(white)",
+			"selected_match_fg": "var(dark_gray)"
 		},
 		{
 			"class": "quick_panel_detail_label",
@@ -669,9 +677,9 @@
 			"class": "quick_panel_label hint",
 			"font.size": "var(font_size_sm)",
 			"font.italic": true,
-			"fg": "var(black)",
-			"bg": "var(red)",
-			"selected_fg": "var(blue)"
+			"fg": "var(light_gray)",
+			"bg": "var(dark_gray)",
+			"selected_fg": "var(white)"
 		},
 		{
 			"class": "quick_panel_label key_binding",
@@ -724,7 +732,7 @@
 		},
 		{
 			"class": "fold_button_control",
-			//"layer0.texture": "Theme - Default/common/fold_closed.png",
+			"layer0.texture": "Bytechamber/Textures/down.png",
 			"layer0.tint": "var(foreground)",
 			"layer0.opacity": 1.0,
 			"content_margin": 8
@@ -738,7 +746,7 @@
 		{
 			"class": "fold_button_control",
 			"attributes": ["expanded"],
-			"layer0.texture": "Theme - Default/common/fold_opened.png",
+			"layer0.texture": "Bytechamber/Textures/up.png",
 		},
 		{
 			"class": "fold_button_control",
@@ -785,23 +793,23 @@
 			"row_padding": 0,
 			"tint_index": 0,
 			"layer0.opacity": 1.0,
-			"tint_modifier": "var(black)",
+			//"tint_modifier": "var(black)",
 		},
 		{
 			"class": "auto_complete",
 			"attributes": ["file_light"],
-			"tint_modifier": "var(black)",
+			//"tint_modifier": "var(black)",
 		},
 		{
 			"class": "scroll_bar_control",
 			"parents": [{"class": "popup_control auto_complete_popup"}],
-			"tint_modifier": "var(black)",
+			//"tint_modifier": "var(black)",
 		},
 		{
 			"class": "scroll_bar_control",
 			"attributes": ["dark"],
 			"parents": [{"class": "popup_control auto_complete_popup"}],
-			"tint_modifier": "var(black)",
+			//"tint_modifier": "var(black)",
 		},
 		{
 			"class": "table_row",
@@ -810,19 +818,19 @@
 		},
 		{
 			"class": "auto_complete_label",
-			"fg": "black",
-			"match_fg": "var(accent)",
-			"selected_fg": "white",
-			"selected_match_fg": "var(accent)",
+			"fg": "var(light_gray)",
+			"match_fg": "var(black)",
+			"selected_fg": "var(white)",
+			"selected_match_fg": "var(dark_gray)",
 			"fg_blend": true
 		},
 		{
 			"class": "auto_complete_label",
 			"parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
-			"fg": "black",
-			"match_fg": "var(accent)",
-			"selected_fg": "white",
-			"selected_match_fg": "var(accent)",
+			"fg": "var(light_gray)",
+			"match_fg": "var(black)",
+			"selected_fg": "var(white)",
+			"selected_match_fg": "var(dark_gray)",
 			"fg_blend": true
 		},
 		{
@@ -833,13 +841,13 @@
 		{
 			"class": "table_row",
 			"attributes": ["selected"],
-			"layer0.tint": "var(black)"
+			//"layer0.tint": "var(black)"
 		},
 		{
 			"class": "table_row",
 			"parents": [{"class": "auto_complete", "attributes": ["file_light"]}],
 			"attributes": ["selected"],
-			"layer0.tint": "var(white)"
+			"layer0.tint": "var(accent)"
 		},
 		{
 			"class": "kind_container",
@@ -857,8 +865,8 @@
 			[
 				{"class": "quick_panel"},
 			],
-			"layer0.tint": "var(red)",
-			"layer0.opacity": 1.0,
+			//"layer0.tint": "var(black)",
+			//"layer0.opacity": 0.6,
 		},
 		{
 			"class": "kind_container",
@@ -866,7 +874,7 @@
 			[
 				{"class": "auto_complete", "attributes": ["file_light"]},
 			],
-			"layer1.tint": "var(red)",
+			//"layer1.tint": "var(black)",
 		},
 		{
 			"class": "kind_container",
@@ -875,7 +883,7 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["selected"]},
 			],
-			"layer1.tint": "var(black)",
+			//"layer1.tint": "var(black)",
 		},
 		{
 			"class": "kind_container",
@@ -884,30 +892,30 @@
 				{"class": "auto_complete", "attributes": ["file_light"]},
 				{"class": "table_row", "attributes": ["selected"]},
 			],
-			"layer1.tint": "var(black)",
+			//"layer1.tint": "var(black)",
 		},
 		{
 			"class": "kind_label",
 			"font.face": "var(font_face)",
-			"font.size": "1.1rem",
+			"font.size": "var(font_size)",
 			"font.bold": true,
 			"font.italic": true,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "quick_panel"}],
-			"font.size": "var(font_size_lg)"
+			"font.size": "var(font_size)"
 		},
 		{
 			"class": "kind_container kind_function",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(magenta)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_function"}],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -916,18 +924,18 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_function"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_keyword",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(green)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_keyword"}],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -936,18 +944,18 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_keyword"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_markup",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(red)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_markup"}],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -956,12 +964,12 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_markup"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_namespace",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(yellow)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
@@ -981,13 +989,13 @@
 		{
 			"class": "kind_container kind_navigation",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(blue)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_navigation"}],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -996,18 +1004,18 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_navigation"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_snippet",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(orange)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_snippet"}],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -1016,12 +1024,12 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_snippet"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_type",
 			"layer0.opacity": 1.0,
-			"layer1.tint": "var(cyan)",
+			"layer1.tint": "var(black)",
 			"layer1.opacity": 1.0,
 		},
 		{
@@ -1036,7 +1044,7 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_type"},
 			],
-			"color": "var(white)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_variable",
@@ -1047,7 +1055,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_variable"}],
-			"color": "var(magenta)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_label",
@@ -1056,7 +1064,7 @@
 				{"class": "quick_panel"},
 				{"class": "kind_container kind_variable"},
 			],
-			"color": "var(magenta)"
+			"color": "var(black)"
 		},
 		{
 			"class": "kind_container kind_color_redish",
@@ -1067,7 +1075,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_redish"}],
-			"color": "var(white)"
+			"color": "var(red)"
 		},
 		{
 			"class": "kind_container kind_color_orangish",
@@ -1078,7 +1086,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_orangish"}],
-			"color": "var(white)"
+			"color": "var(orange)"
 		},
 		{
 			"class": "kind_container kind_color_yellowish",
@@ -1089,7 +1097,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_yellowish"}],
-			"color": "var(black)"
+			"color": "var(yellow)"
 		},
 		{
 			"class": "kind_container kind_color_greenish",
@@ -1100,7 +1108,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_greenish"}],
-			"color": "var(black)"
+			"color": "var(green)"
 		},
 		{
 			"class": "kind_container kind_color_cyanish",
@@ -1111,7 +1119,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_cyanish"}],
-			"color": "var(white)"
+			"color": "var(cyan)"
 		},
 		{
 			"class": "kind_container kind_color_bluish",
@@ -1122,7 +1130,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_bluish"}],
-			"color": "var(white)"
+			"color": "var(blue)"
 		},
 		{
 			"class": "kind_container kind_color_purplish",
@@ -1133,7 +1141,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_purplish"}],
-			"color": "var(white)"
+			"color": "var(purple)"
 		},
 		{
 			"class": "kind_container kind_color_pinkish",
@@ -1144,7 +1152,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_pinkish"}],
-			"color": "var(white)"
+			"color": "var(red)"
 		},
 		{
 			"class": "kind_container kind_color_dark",
@@ -1155,7 +1163,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_dark"}],
-			"color": "var(white)"
+			"color": "var(dark)"
 		},
 		{
 			"class": "kind_container kind_color_light",
@@ -1166,7 +1174,7 @@
 		{
 			"class": "kind_label",
 			"parents": [{"class": "kind_container kind_color_light"}],
-			"color": "var(black)"
+			"color": "var(white)"
 		},
 		{
 			"class": "symbol_container",
@@ -1180,13 +1188,13 @@
 			"class": "auto_complete_detail_pane",
 			"tint_index": 0,
 			"layer0.opacity": 1.0,
-			"tint_modifier": "var(white)",
+			"tint_modifier": "var(black)",
 			"content_margin": [8, 4, 8, 4]
 		},
 		{
 			"class": "auto_complete_detail_pane",
 			"attributes": ["file_light"],
-			"tint_modifier": "var(white)",
+			"tint_modifier": "var(black)",
 		},
 		{
 			"class": "auto_complete_info",
@@ -1196,11 +1204,11 @@
 			"class": "auto_complete_kind_name_label",
 			"font.size": "1.0rem",
 			"font.italic": true,
-			"border_color": "var(white)"
+			"border_color": "var(black)"
 		},
 		{
 			"class": "auto_complete_details",
-			"monospace_background_color": "var(white)"
+			"monospace_background_color": "var(black)"
 		},
 		{
 			"class": "auto_complete_details",
@@ -1211,18 +1219,19 @@
 					"attributes": ["file_light"]
 				}
 			],
-			"monospace_background_color": "var(white)"
+			"monospace_background_color": "var(black)"
 		},
 		{
 			"class": "annotation_close_button",
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/close-o.png",
 			"layer0.opacity": 1.0,
-			"layer0.tint": "var(white)",
+			"layer0.tint": "var(black)",
 			"content_margin": [8, 8],
 		},
 		{
 			"class": "annotation_close_button",
 			"attributes": ["hover"],
+			"layer0.texture": "Bytechamber/Textures/close.png",
 			"layer0.opacity": 1.0
 		},
 
@@ -1252,7 +1261,7 @@
 		},
 		{
 			"class": "panel_close_button",
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/close-o.png",
 			"layer0.tint": "var(black)",
 			"layer0.opacity": 1.0,
 			"content_margin": 8
@@ -1261,6 +1270,7 @@
 			"class": "panel_close_button",
 			"attributes": ["hover"],
 			"layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" },
+			"layer0.texture": "Bytechamber/Textures/close.png",
 			"layer0.tint": "var(accent)"
 		},
 
@@ -1530,191 +1540,192 @@
 		},
 		{
 			"class": "icon_regex",
-			//"layer0.texture": "Theme - Default/common/icon_regex.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/regex.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_regex",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_regex",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_case",
-			//"layer0.texture": "Theme - Default/common/icon_case_sensitive.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/case.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_case",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_case",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_whole_word",
-			//"layer1.texture": "Theme - Default/common/icon_whole_word.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/word.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_whole_word",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_whole_word",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_wrap",
-			//"layer1.texture": "Theme - Default/common/icon_wrap.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/wrap.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_wrap",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_wrap",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_in_selection",
-			//"layer1.texture": "Theme - Default/common/icon_in_selection.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/selection.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_in_selection",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_in_selection",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_highlight",
-			//"layer1.texture": "Theme - Default/common/icon_highlight_matches.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/highlight.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_highlight",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_highlight",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_preserve_case",
-			//"layer1.texture": "Theme - Default/common/icon_preserve_case.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/keep.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_preserve_case",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_preserve_case",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_context",
-			//"layer1.texture": "Theme - Default/common/icon_context.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/context.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_context",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_context",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_use_buffer",
-			//"layer1.texture": "Theme - Default/common/icon_use_buffer.png",
-			"layer0.tint": "var(white)",
-			"layer0.opacity": 1.0,
+			"layer1.texture": "Bytechamber/Textures/buffer.png",
+			"layer1.tint": "var(white)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_use_buffer",
 			"attributes": ["hover"],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(accent)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(accent)"
 		},
 		{
 			"class": "icon_use_buffer",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.opacity": 1.0,
-			"layer0.tint": "var(black)"
+			"layer1.opacity": 1.0,
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_use_gitignore",
-			"layer0.texture": "Bytechamber/Textures/git.png",
-			"layer0.tint": "var(black)",
-			"layer0.opacity": 1.0,
+			"layer0.opacity": 0.0,
+			"layer1.texture": "Bytechamber/Textures/git.png",
+			"layer1.tint": "var(black)",
+			"layer1.opacity": 1.0,
 			"content_margin": [8, 8]
 		},
 		{
 			"class": "icon_use_gitignore",
 			"parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
-			"layer0.tint": "var(black)"
+			"layer1.tint": "var(black)"
 		},
 		{
 			"class": "icon_use_gitignore",
 			"parents": [{"class": "icon_button_control", "attributes": ["hover"]}],
-			"layer0.tint": "var(white)"
+			"layer1.tint": "var(white)"
 		},
 		// Labels
 		{
@@ -1771,7 +1782,7 @@
 		},
 		{
 			"class": "sidebar_button_control",
-			"layer0.texture": "Bytechamber/Textures/hex2.png",
+			"layer0.texture": "Bytechamber/Textures/side.png",
 			"layer0.opacity": 1.0,
 			"layer0.tint": "var(black)",
 			"content_margin": [8, 8]
@@ -1805,74 +1816,59 @@
 			"layer0.texture": "Bytechamber/Textures/git.png",
 			"layer0.tint": "var(black)",
 			"layer0.opacity": 1.0,
-			"content_margin": [4, 8]
+			"content_margin": [5, 5]
 		},
 		{
 			"class": "vcs_changes_annotation",
 			"font.face": "var(font_face)",
-			"font.size": 9,
+			"font.size": "var(font_size_sm)",
 			"color": "var(black)",
-			"border_color": "var(black)",
-			"content_margin": [2, 0]
+			"border_size": 0,
+			"content_margin": [4, 0]
 		},
 
 		// Checkboxes
 		{
 			"class": "checkbox_box_control",
 			"content_margin": [8, 8, 0, 0],
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/radio-o.png",
 			"layer0.tint": "var(black)",
-			"layer0.opacity": 1.0,
-			//"layer1.texture": "Theme - Default/common/checkbox_border.png",
-			"layer1.tint": "var(black)",
-			"layer1.opacity": 1.0,
-			//"layer2.texture": "Theme - Default/common/checkbox_check.png",
-			"layer2.tint": "var(white)",
-			"layer2.opacity": 1.0
+			"layer0.opacity": 1.0
 		},
 		{
 			"class": "checkbox_box_control",
 			"parents": [ {"class": "checkbox_control", "attributes": ["checked"]}],
-			"layer2.tint": "var(black)",
-			"layer2.opacity": 1.0
+			"layer0.texture": "Bytechamber/Textures/radio.png",
 		},
 		{
 			"class": "checkbox_box_control",
 			"parents": [ {"class": "checkbox_control", "attributes": ["disabled"]}],
-			//"layer2.texture": "Theme - Default/common/checkbox_disabled.png",
-			"layer2.tint": "var(dark_gray)",
-			"layer2.opacity": 1.0
+			"layer0.tint": "var(dark_gray)",
+			"layer0.opacity": 0.3
 		},
 
 		// Radio Buttons
 		{
 			"class": "radio_button_list_control",
-			"spacing": 4
+			"spacing": 0
 		},
 		{
 			"class": "checkbox_box_control",
 			"parents": [{"class": "radio_button_list_control"}, {"class": "checkbox_control"}],
 			"content_margin": [8, 8, 0, 0],
-			"layer0.texture": "Bytechamber/Textures/hex1.png",
+			"layer0.texture": "Bytechamber/Textures/radio-o.png",
 			"layer0.tint": "var(black)",
-			"layer0.opacity": 1.0,
-			//"layer1.texture": "Theme - Default/common/radio_button_border.png",
-			"layer1.tint": "var(black)",
-			"layer1.opacity": 1.0,
-			//"layer2.texture": "Theme - Default/common/radio_button_on.png",
-			"layer2.tint": "var(white)",
-			"layer2.opacity": 1.0
+			"layer0.opacity": 1.0
 		},
 		{
 			"class": "checkbox_box_control",
 			"parents": [{"class": "radio_button_list_control"}, {"class": "checkbox_control", "attributes": ["hover"]}],
-			"layer1.tint": "var(accent)"
+			"layer0.tint": "var(accent)"
 		},
 		{
 			"class": "checkbox_box_control",
 			"parents": [{"class": "radio_button_list_control"}, {"class": "checkbox_control", "attributes": ["checked"]}],
-			"layer2.tint": "var(black)",
-			"layer2.opacity": 1.0
+			"layer0.texture": "Bytechamber/Textures/radio.png",
 		},
 	]
 }
